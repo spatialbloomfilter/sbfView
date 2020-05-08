@@ -20,7 +20,7 @@ export class FilterService {
   dataSet;
   nonElemDataSet;
 
-  constructor(public csvManager: CsvManagerService, public wholeFilter: WholeFilterService) { this.loadData(); }
+  constructor(public csvManager: CsvManagerService, public wholeFilter: WholeFilterService) { } // this.loadData(); }
 
   loadData() {
     this.csvManager.getStats().subscribe(

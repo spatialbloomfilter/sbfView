@@ -28,7 +28,7 @@ export class DataResultsService {
   isepr = [];
 
   constructor(public csvManager: CsvManagerService, public chart: ChartsService, public filter: FilterService) {
-     this.loadData(0);
+     // this.loadData(0);
   }
 
   cleanData() {
