@@ -21,7 +21,7 @@ export class FilterService {
   nonElemDataSet;
 
   constructor(public csvManager: CsvManagerService, public wholeFilter: WholeFilterService) {
-      //this.loadData();
+      // this.loadData();
   }
 
   loadData() {

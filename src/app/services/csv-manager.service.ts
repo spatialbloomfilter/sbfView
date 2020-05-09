@@ -15,11 +15,13 @@ export class CsvManagerService {
   private stats;
   private fpr;
   private isepr;
+  private clean;
 
   constructor(private http: HttpClient, private myHttp: HttpServiceService) {
     this.stats = this.myHttp.ip + '/stats';
     this.fpr = this.myHttp.ip + '/fpr';
     this.isepr = this.myHttp.ip + '/isepr';
+    this.isepr = this.myHttp.ip + '/cleanData';
   }
 
   getStats() {
@@ -32,6 +34,10 @@ export class CsvManagerService {
 
   getISEPR() {
     return this.http.get(this.isepr, {responseType: 'text'});
+  }
+
+  getClean() {
+    return this.http.get(this.clean, {responseType: 'text'});
   }
 
   downloadPDF(chartId) {
