@@ -43,16 +43,15 @@ export class WholeFilterService {
     this.p1.length = 0;
     this.n1.length = 0;
 
-    // let myN = this.n * (0.77);
-    // const step = this.n * (0.53);
-
-    const step = this.n * (0.53);
-    let myN =  this.n * (0.77); // - (9 * step);this.n * 1 - (9 * step); //*
+  //  const step = this.n * (0.53);
+  //  let myN =  this.n * (0.77);
+    const step = 30000;
+    let myN = this.n - (1 * step);
 
     let index = 0;
     while ( index <= 20) {
       const newN = myN;
-      this.n1.push(this.getStrNum(myN));
+      this.n1.push(myN);
       this.p1.push(this.calculateP(this.k, this.m, newN));
       myN += step;
       index++;

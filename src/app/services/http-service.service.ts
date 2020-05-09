@@ -13,7 +13,6 @@ export class HttpServiceService {
 
   base = 'https://sbfbackend1.herokuapp.com';
  // base = 'http://localhost:3000';
-  port = '3000';
   ip = this.base;
   isCaluclating = false;
 
@@ -28,7 +27,7 @@ export class HttpServiceService {
 
     await new Promise((res, _) => {
       const saveUrl = this.ip + '/save';
-      this.http.post(saveUrl, formData).subscribe( _ => res('Ok'));
+      this.http.post(saveUrl, formData).subscribe( () => res('Ok'));
     });
     console.log('Finish save parameters in ');
     console.timeEnd('save');

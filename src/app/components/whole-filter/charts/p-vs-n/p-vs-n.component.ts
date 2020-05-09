@@ -64,7 +64,7 @@ export class PVsNComponent implements OnInit {
             scaleLabel: {
               display: true,
               labelString: xlabel
-            },
+            }/*,
             ticks: {
               callback: (value, index, values) => {
                 if (index % 2 === 0) {
@@ -72,7 +72,7 @@ export class PVsNComponent implements OnInit {
                 }
               },
               autoSkip: false
-            }
+            }*/
           }]
         }
       }

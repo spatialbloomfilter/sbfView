@@ -62,8 +62,13 @@ export class ChartsService {
     console.log('update whole filter charts');
     this.wholeFilter.setParams(this.filter.k, this.filter.m, this.filter.n, this.filter.p);
 
+    this.pVSk.data.labels = this.wholeFilter.k3;
     this.pVSk.data.datasets[0].data = this.wholeFilter.p3;
+
+    this.pVSm.data.labels = this.wholeFilter.m2;
     this.pVSm.data.datasets[0].data = this.wholeFilter.p2;
+
+    this.pVSn.data.labels = this.wholeFilter.n1;
     this.pVSn.data.datasets[0].data = this.wholeFilter.p1;
   }
 
