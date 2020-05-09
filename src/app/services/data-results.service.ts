@@ -28,7 +28,7 @@ export class DataResultsService {
   isepr = [];
 
   constructor(public csvManager: CsvManagerService, public chart: ChartsService, public filter: FilterService) {
-     this.loadData(0);
+    // this.loadData(0);
   }
 
   cleanData() {
@@ -84,6 +84,7 @@ export class DataResultsService {
     for (let i = 1; i < csvRecordsArray.length; i++) {
       const currentRecord = ( <string> csvRecordsArray[i] ).split(';');
       if (currentRecord.length === 3) {
+        console.log(currentRecord[0].trim() + ' - ' + currentRecord[1].trim() + ' - ' + currentRecord[2].trim());
         this.fpr.push(currentRecord[2].trim());
       }
     }

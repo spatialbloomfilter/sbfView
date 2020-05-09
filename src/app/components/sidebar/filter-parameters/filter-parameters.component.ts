@@ -51,11 +51,10 @@ export class FilterParametersComponent implements OnInit {
   selectHashFunction(event) {
     const HashFunIndex = event.target.value;
     switch (HashFunIndex) {
-      case '1':  this.hashFunction = 'SHA1'; this.filter.hash = '1'; break;
+      case '1': this.hashFunction = 'SHA1'; this.filter.hash = '1'; break;
       case '4': this.hashFunction =  'MD4'; this.filter.hash = '4'; break;
       case '5': this.hashFunction = 'MD5'; this.filter.hash = '5'; break;
     }
-    this.filter.setHashFunc(this.hashFunction);
   }
 
   setHashSalt(e) {
