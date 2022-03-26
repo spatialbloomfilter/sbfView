@@ -39,7 +39,7 @@
     "jquery": "^3.5.0",
     "jspdf": "^1.5.3",
     "kind-of": "^6.0.3",
-    "minimist": "^0.2.1",
+    "minimist": "^1.2.6",
     "ngx-childprocess": "0.0.6",
     "node-addon-api": "^0.6.3",
     "octicons": "^8.5.0",
